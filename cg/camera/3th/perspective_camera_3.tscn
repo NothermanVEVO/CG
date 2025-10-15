@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://to8d7ncwjb4c"]
+
+[ext_resource type="Script" uid="uid://crgo2a4hl04i4" path="res://camera/3th/perspective_camera_3.gd" id="1_c2lrk"]
+
+[node name="PerspectiveCamera3" type="SpringArm3D"]
+spring_length = 3.0
+script = ExtResource("1_c2lrk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18376279, 1.0409145)
