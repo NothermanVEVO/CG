@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbhldptq1ilcd"]
+
+[ext_resource type="PackedScene" uid="uid://to8d7ncwjb4c" path="res://camera/3th/perspective_camera_3.tscn" id="1_oul6g"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n04j3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kqu6x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1pvu3"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_oul6g"]
+inner_radius = 0.336
+outer_radius = 0.383
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="Corpo" type="Node3D" parent="."]
+
+[node name="Body" type="MeshInstance3D" parent="Corpo"]
+mesh = SubResource("CapsuleMesh_n04j3")
+skeleton = NodePath("../..")
+
+[node name="Olho Direito" type="MeshInstance3D" parent="Corpo"]
+transform = Transform3D(0.175, 0, 0, 0, 0.175, 0, 0, 0, 0.175, -0.18120372, 0.5647894, 0.47885948)
+mesh = SubResource("SphereMesh_kqu6x")
+skeleton = NodePath("../..")
+
+[node name="Olho Esquerdo" type="MeshInstance3D" parent="Corpo"]
+transform = Transform3D(0.175, 0, 0, 0, 0.175, 0, 0, 0, 0.175, 0.14891297, 0.5647894, 0.47885948)
+mesh = SubResource("SphereMesh_kqu6x")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1pvu3")
+
+[node name="PerspectiveCamera3" parent="." instance=ExtResource("1_oul6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4023386, 0.033427894)
+collision_mask = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1602147, 0)
+mesh = SubResource("TorusMesh_oul6g")
