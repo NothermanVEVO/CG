@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3h5cdd2oemub"]
+[gd_scene load_steps=10 format=3 uid="uid://b3h5cdd2oemub"]
 
+[ext_resource type="PackedScene" uid="uid://dhgj5kc71ueex" path="res://assets/doors/scenes/strange_door.tscn" id="1_lqd3y"]
 [ext_resource type="PackedScene" uid="uid://dbhldptq1ilcd" path="res://player/player.tscn" id="1_n04j3"]
 [ext_resource type="Script" uid="uid://b8uuwunqw1jhd" path="res://player/player.gd" id="2_1pvu3"]
+[ext_resource type="PackedScene" uid="uid://xht6k66jdvee" path="res://objects/ball.tscn" id="4_f6g85"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eib5m"]
 
@@ -19,6 +21,9 @@ background_mode = 2
 sky = SubResource("Sky_lqd3y")
 
 [node name="Level1House" type="Node3D"]
+
+[node name="door" parent="." instance=ExtResource("1_lqd3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.189669, -0.13140678, -5.9027863)
 
 [node name="Chao" type="MeshInstance3D" parent="."]
 transform = Transform3D(27.356153, 0, 0, 0, 1, 0, 0, 0, 21.371996, 0, 0, 0)
@@ -41,3 +46,6 @@ environment = SubResource("Environment_n04j3")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.2761115, 0.9071487, 0.31755894, 0.5263166, -0.13375224, 0.8397031, 0.8042098, 0.3989882, -0.44051686, 10.285229, 15.189601, 1.6213231)
 shadow_enabled = true
+
+[node name="Ball" parent="." instance=ExtResource("4_f6g85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4876695, 2.1834345, -7.177901)
