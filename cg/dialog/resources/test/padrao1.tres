@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=7 format=3 uid="uid://db7yf6a3u35si"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_txvrj"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_hrcwt"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="3_28ley"]
+
+[sub_resource type="Resource" id="Resource_h1e2q"]
+script = ExtResource("1_txvrj")
+character_name = "Shrek"
+text = "Eh... olá.... Você tem cebola com você?"
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[sub_resource type="Resource" id="Resource_67xmx"]
+script = ExtResource("1_txvrj")
+character_name = "Shrek"
+text = "Então, tô com mó fome, e tu sabe como é, ainda mais nesse calor."
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[sub_resource type="Resource" id="Resource_ekagp"]
+script = ExtResource("1_txvrj")
+character_name = "Shrek"
+text = "Tu não consegue arranjar umas cebolas pra mim não?"
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("3_28ley")
+dialogs = Array[ExtResource("1_txvrj")]([SubResource("Resource_h1e2q"), SubResource("Resource_67xmx"), SubResource("Resource_ekagp")])
+metadata/_custom_type_script = "uid://doptbal56qkjw"
