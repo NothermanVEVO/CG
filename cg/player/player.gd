@@ -26,8 +26,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x *= DECELERATION
 		velocity.z *= DECELERATION
 	
-	#velocity = velocity.rotated(Vector3(0, 1, 0), $PerspectiveCamera3.rotation.y)
-	
 	if direction:
 		_corpo.rotation.y = lerp_angle(_corpo.rotation.y, Vector2(velocity.z, velocity.x).angle(), delta * 16)
 	

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://jpae1g0lcdpy"]
+
+[ext_resource type="PackedScene" uid="uid://kss5w8vtm6vh" path="res://assets/characters/shrek/shrek.glb" id="1_tj7mq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj7mq"]
+radius = 18.243652
+height = 84.02551
+
+[node name="Shrek" instance=ExtResource("1_tj7mq")]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="0"]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42.036682, 0)
+shape = SubResource("CapsuleShape3D_tj7mq")
