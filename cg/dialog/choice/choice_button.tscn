@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://wqj25qixb3f0"]
+
+[ext_resource type="Script" uid="uid://b4rmn66y7xbkr" path="res://dialog/choice/choice_button.gd" id="1_5shiw"]
+
+[node name="Choice" type="MarginContainer"]
+custom_minimum_size = Vector2(0, 100)
+offset_right = 100.0
+offset_bottom = 23.0
+script = ExtResource("1_5shiw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+layout_mode = 2
+mouse_filter = 2
+border_color = Color(1, 1, 1, 1)
+border_width = 2.0
+editor_only = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

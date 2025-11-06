@@ -1,9 +1,11 @@
-extends Control
+extends VBoxContainer
 
 class_name DialogBox
 
-@onready var _name_text : RichTextLabel = $MarginContainer/Nome/RichTextLabel
-@onready var _dialog_text : RichTextLabel = $MarginContainer/Texto/RichTextLabel
+@onready var _name_text : RichTextLabel = $DialogContainer/Nome/RichTextLabel
+@onready var _dialog_text : RichTextLabel = $DialogContainer/Texto/RichTextLabel
+
+@onready var _choices_v_box : VBoxContainer = $ChoicesContainer/ChoicesVBox
 
 const _NORMAL_CHARACTERS : float = 0.05
 const _SPECIAL_CHARACTERS : float = 0.1
@@ -39,15 +41,20 @@ func start(dialogs : Dialogs) -> void:
 		_dialog_text.text = dialog.text
 		
 		_dialog_text.visible_characters = 0
-		_run_dialog(_compile_text(dialog.text))
+		_run_dialog(_compile_text(dialog.text), not dialog.choices.is_empty())
 		await change_dialog
+		if dialog.choices:
+			for choice in dialog.choices:
+				var choice_button = choice.create_choice_button()
+				choice_button.choice_selected.connect(ChoicesHandler.handle_id)
+				_choices_v_box.add_child(choice_button)
+			await ChoicesHandler.choice_selected
 	_started = false
 	dialog_ended.emit()
 
-func _run_dialog(text : String) -> void:
+func _run_dialog(text : String, has_options : bool) -> void:
 	_can_change_dialog = false
-	var _maximum_visible_characters : int = text.length()
-	for i in _maximum_visible_characters:
+	for i in text.length():
 		_dialog_text.visible_characters = i + 1
 		match text[i]:
 			'.', '!', '?':
@@ -64,6 +71,8 @@ func _run_dialog(text : String) -> void:
 			_can_end_dialog = false
 			break
 	_can_change_dialog = true
+	if has_options:
+		_finish_dialog()
 
 func _finish_dialog() -> void:
 	if _can_change_dialog:
@@ -81,6 +90,10 @@ func _compile_text(text : String) -> String:
 		var matches := regex.search(new_text)
 		new_text = new_text.replace(matches.strings[0], "")
 	return new_text
+
+func _clear_choices_box() -> void:
+	for child in _choices_v_box.get_children():
+		_choices_v_box.remove_child(child)
 
 func has_started() -> bool:
 	return _started

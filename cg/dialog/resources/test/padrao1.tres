@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialogs" load_steps=7 format=3 uid="uid://db7yf6a3u35si"]
+[gd_resource type="Resource" script_class="Dialogs" load_steps=10 format=3 uid="uid://db7yf6a3u35si"]
 
 [ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_txvrj"]
 [ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_hrcwt"]
@@ -16,10 +16,28 @@ character_name = "Shrek"
 text = "Então, tô com mó fome, e tu sabe como é, ainda mais nesse calor."
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 
+[sub_resource type="Resource" id="Resource_txvrj"]
+script = ExtResource("2_hrcwt")
+text = "Claro que sim, Shrek"
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_hrcwt"]
+script = ExtResource("2_hrcwt")
+text = "Não, Shrek. EU TE ODEIO!!!! Faz um pix de vintão pra eu voltar pra casa?"
+ID = 1
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_28ley"]
+script = ExtResource("2_hrcwt")
+text = "asd asd asd asd ad asd asd asd asd asd asd asd  asdas dsad sa das das dasd as asd asd asd "
+ID = 2
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
 [sub_resource type="Resource" id="Resource_ekagp"]
 script = ExtResource("1_txvrj")
 character_name = "Shrek"
 text = "Tu não consegue arranjar umas cebolas pra mim não?"
+choices = Array[ExtResource("2_hrcwt")]([SubResource("Resource_txvrj"), SubResource("Resource_hrcwt"), SubResource("Resource_28ley")])
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 
 [resource]

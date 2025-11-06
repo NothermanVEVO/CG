@@ -14,6 +14,10 @@ config/name="CG"
 run/main_scene="uid://b3h5cdd2oemub"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
+[autoload]
+
+ChoicesHandler="*res://autoload/choices_handler.gd"
+
 [display]
 
 window/stretch/mode="viewport"
