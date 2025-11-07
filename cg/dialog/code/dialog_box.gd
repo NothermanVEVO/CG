@@ -49,6 +49,7 @@ func start(dialogs : Dialogs) -> void:
 				choice_button.choice_selected.connect(ChoicesHandler.handle_id)
 				_choices_v_box.add_child(choice_button)
 			await ChoicesHandler.choice_selected
+			_clear_choices_box()
 	_started = false
 	dialog_ended.emit()
 

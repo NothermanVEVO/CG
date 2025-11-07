@@ -14,4 +14,6 @@ func handle_id(ID : int) -> void:
 			print("Recusou")
 		SHIT_IN_THE_MISSION:
 			print("Já te falaram que você é estranho?")
+		4:
+			print("vanderlei")
 	choice_selected.emit()
