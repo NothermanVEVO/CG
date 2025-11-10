@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpj0w4pdyn1x7"
-path.s3tc="res://.godot/imported/sakamoto4_Gato.png-2b1b99353bd1bedef7af00e908b791c1.s3tc.ctex"
+uid="uid://den2a0inyy6v6"
+path.s3tc="res://.godot/imported/sakamoto_Gato.png-37fd8f402b543f44a4a238114cae2bab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/Sakamoto/sakamoto4_Gato.png"
-dest_files=["res://.godot/imported/sakamoto4_Gato.png-2b1b99353bd1bedef7af00e908b791c1.s3tc.ctex"]
+source_file="res://assets/Sakamoto/sakamoto_Gato.png"
+dest_files=["res://.godot/imported/sakamoto_Gato.png-37fd8f402b543f44a4a238114cae2bab.s3tc.ctex"]
 
 [params]
 

@@ -16,4 +16,6 @@ func handle_id(ID : int) -> void:
 			print("Já te falaram que você é estranho?")
 		4:
 			print("vanderlei")
+		5:
+			print("mentira")
 	choice_selected.emit()

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialogs" load_steps=12 format=3 uid="uid://db7yf6a3u35si"]
+[gd_resource type="Resource" script_class="Dialogs" load_steps=14 format=3 uid="uid://db7yf6a3u35si"]
 
 [ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_txvrj"]
 [ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_hrcwt"]
@@ -53,7 +53,20 @@ text = "Eu sei que mep fewqmféqwomfeapfmeaEF"
 choices = Array[ExtResource("2_hrcwt")]([SubResource("Resource_fng4j")])
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 
+[sub_resource type="Resource" id="Resource_k5n1o"]
+script = ExtResource("2_hrcwt")
+text = "Cageui na sua mochila"
+ID = 5
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_ghos4"]
+script = ExtResource("1_txvrj")
+character_name = "WIlson"
+text = "Roberto tá na minha cama"
+choices = Array[ExtResource("2_hrcwt")]([SubResource("Resource_k5n1o")])
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
 [resource]
 script = ExtResource("3_28ley")
-dialogs = Array[ExtResource("1_txvrj")]([SubResource("Resource_h1e2q"), SubResource("Resource_67xmx"), SubResource("Resource_ekagp"), SubResource("Resource_pmj0b")])
+dialogs = Array[ExtResource("1_txvrj")]([SubResource("Resource_h1e2q"), SubResource("Resource_67xmx"), SubResource("Resource_ekagp"), SubResource("Resource_pmj0b"), SubResource("Resource_ghos4")])
 metadata/_custom_type_script = "uid://doptbal56qkjw"

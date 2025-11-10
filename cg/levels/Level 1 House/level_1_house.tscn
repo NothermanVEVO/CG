@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b3h5cdd2oemub"]
+[gd_scene load_steps=14 format=3 uid="uid://b3h5cdd2oemub"]
 
 [ext_resource type="PackedScene" uid="uid://dhgj5kc71ueex" path="res://assets/doors/scenes/strange_door.tscn" id="1_lqd3y"]
 [ext_resource type="PackedScene" uid="uid://dbhldptq1ilcd" path="res://player/player.tscn" id="1_n04j3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cvauof8r1ktoo" path="res://assets/interaction/Interest.glb" id="5_qcxbp"]
 [ext_resource type="Script" uid="uid://b2got4vpnvr1c" path="res://test.gd" id="6_fg5ic"]
 [ext_resource type="PackedScene" uid="uid://jpae1g0lcdpy" path="res://assets/characters/shrek/shrek.tscn" id="7_fg5ic"]
+[ext_resource type="PackedScene" uid="uid://cw3drew2mpht2" path="res://assets/trees/tree1/tree1.glb" id="8_virqd"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eib5m"]
 
@@ -54,8 +55,11 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.645332, 5.3764644, -7.176406)
 
 [node name="Interest" parent="." instance=ExtResource("5_qcxbp")]
-transform = Transform3D(0.21, 0, 0, 0, 0.21, 0, 0, 0, 0.21, 7.132, 1.358243, 4.1)
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -11.524581, 3.1168838, -7.3779225)
 script = ExtResource("6_fg5ic")
 
 [node name="Shrek" parent="." instance=ExtResource("7_fg5ic")]
 transform = Transform3D(0.035, 0, 0, 0, 0.023796223, 0, 0, 0, 0.035, -11.555315, 0.02867508, -7.387088)
+
+[node name="tree1" parent="." instance=ExtResource("8_virqd")]
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 5.58107, 10.917859)

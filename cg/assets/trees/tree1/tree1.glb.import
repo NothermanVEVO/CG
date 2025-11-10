@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://btkuvrs81bkit"
-path="res://.godot/imported/sakamoto.glb-247fa0b29a348b19d957299054ed5c64.scn"
+uid="uid://cw3drew2mpht2"
+path="res://.godot/imported/tree1.glb-8f73d9783a121b1d020849045f9fed5c.scn"
 
 [deps]
 
-source_file="res://assets/Sakamoto/sakamoto.glb"
-dest_files=["res://.godot/imported/sakamoto.glb-247fa0b29a348b19d957299054ed5c64.scn"]
+source_file="res://assets/trees/tree1/tree1.glb"
+dest_files=["res://.godot/imported/tree1.glb-8f73d9783a121b1d020849045f9fed5c.scn"]
 
 [params]
 
