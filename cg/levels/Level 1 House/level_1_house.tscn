@@ -1,17 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://b3h5cdd2oemub"]
+[gd_scene load_steps=13 format=3 uid="uid://b3h5cdd2oemub"]
 
 [ext_resource type="PackedScene" uid="uid://dhgj5kc71ueex" path="res://assets/doors/scenes/strange_door.tscn" id="1_lqd3y"]
 [ext_resource type="PackedScene" uid="uid://dbhldptq1ilcd" path="res://player/player.tscn" id="1_n04j3"]
-[ext_resource type="Script" uid="uid://b8uuwunqw1jhd" path="res://player/player.gd" id="2_1pvu3"]
 [ext_resource type="PackedScene" uid="uid://xht6k66jdvee" path="res://objects/ball.tscn" id="4_f6g85"]
 [ext_resource type="PackedScene" uid="uid://cvauof8r1ktoo" path="res://assets/interaction/Interest.glb" id="5_qcxbp"]
 [ext_resource type="Script" uid="uid://b2got4vpnvr1c" path="res://test.gd" id="6_fg5ic"]
 [ext_resource type="PackedScene" uid="uid://jpae1g0lcdpy" path="res://assets/characters/shrek/shrek.tscn" id="7_fg5ic"]
 [ext_resource type="PackedScene" uid="uid://cw3drew2mpht2" path="res://assets/trees/tree1/tree1.glb" id="8_virqd"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_eib5m"]
-
-[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_1pvu3"]
+[ext_resource type="Script" uid="uid://xrjy6sqlgs4" path="res://interaction/interaction.gd" id="9_05hq7"]
+[ext_resource type="PackedScene" uid="uid://bars4a8htvf6e" path="res://assets/maps/Swap/Scene/swap.tscn" id="9_mmoqy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1pvu3"]
 sky_top_color = Color(0.5963905, 0.8121756, 0.9812675, 1)
@@ -27,22 +24,10 @@ sky = SubResource("Sky_lqd3y")
 [node name="Level1House" type="Node3D"]
 
 [node name="door" parent="." instance=ExtResource("1_lqd3y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.189669, -0.13140678, -5.9027863)
-
-[node name="Chao" type="MeshInstance3D" parent="."]
-transform = Transform3D(27.356153, 0, 0, 0, 1, 0, 0, 0, 21.371996, 0, 0, 0)
-mesh = SubResource("PlaneMesh_eib5m")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Chao"]
-collision_layer = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao/StaticBody3D"]
-transform = Transform3D(2.0080016, 0, 0, 0, 1, 0, 0, 0, 2.0001354, 0, 0, 0)
-shape = SubResource("HeightMapShape3D_1pvu3")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.189669, -1.2332587, -5.9027863)
 
 [node name="Player" parent="." instance=ExtResource("1_n04j3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.868514, 0)
-script = ExtResource("2_1pvu3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n04j3")
@@ -52,14 +37,20 @@ transform = Transform3D(-0.2761115, 0.9071487, 0.31755894, 0.5263166, -0.1337522
 shadow_enabled = true
 
 [node name="Ball" parent="." instance=ExtResource("4_f6g85")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.645332, 5.3764644, -7.176406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.592793, 22.405933, -0.26956463)
 
 [node name="Interest" parent="." instance=ExtResource("5_qcxbp")]
-transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -11.524581, 3.1168838, -7.3779225)
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -1.638058, 3.9217691, -7.3779225)
 script = ExtResource("6_fg5ic")
 
 [node name="Shrek" parent="." instance=ExtResource("7_fg5ic")]
-transform = Transform3D(0.035, 0, 0, 0, 0.023796223, 0, 0, 0, 0.035, -11.555315, 0.02867508, -7.387088)
+transform = Transform3D(0.018087666, 0, 0.0519407, 0, 0.055, 0, -0.0519407, 0, 0.018087666, -19.142277, -0.12097025, -5.4127083)
 
 [node name="tree1" parent="." instance=ExtResource("8_virqd")]
-transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 5.58107, 10.917859)
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 3.8442678, 10.917859)
+
+[node name="Swap" parent="." instance=ExtResource("9_mmoqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -167.8245, -15.026855, 469.47992)
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("9_05hq7")

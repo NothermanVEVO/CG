@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
+class_name Player
+
 ## ANGELINO
 
-const SPEED : float = 500.0
+const SPEED : float = 2000.0
 const JUMP_SPEED : float = 300.0
 const DECELERATION : float = 0.8
 
