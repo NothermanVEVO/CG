@@ -24,19 +24,21 @@ signal dialog_ended
 
 func _ready() -> void:
 	add_child(_timer)
-	start(load("res://dialog/resources/test/padrao1.tres"))
+	visible = false
+	DialogHandler.dialog_box = self
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("Finish Dialog"):
+	if Input.is_action_just_pressed("Finish Dialog") and _started:
 		_finish_dialog()
 
 func start(dialogs : Dialogs) -> void:
-	if _started:
+	if _started or not dialogs:
 		return
-	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	_started = true
 	
 	for dialog in dialogs.dialogs:
+		DialogHandler.handle_dialog_id(dialog.ID)
 		_name_text.text = dialog.character_name
 		_dialog_text.text = dialog.text
 		
@@ -46,11 +48,12 @@ func start(dialogs : Dialogs) -> void:
 		if dialog.choices:
 			for choice in dialog.choices:
 				var choice_button = choice.create_choice_button()
-				choice_button.choice_selected.connect(ChoicesHandler.handle_id)
+				choice_button.choice_selected.connect(DialogHandler.handle_option_id)
 				_choices_v_box.add_child(choice_button)
-			await ChoicesHandler.choice_selected
+			await DialogHandler.choice_selected
 			_clear_choices_box()
 	_started = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	dialog_ended.emit()
 
 func _run_dialog(text : String, has_options : bool) -> void:

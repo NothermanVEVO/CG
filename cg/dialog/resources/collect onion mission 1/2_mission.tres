@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=8 format=3 uid="uid://c1ioxjqhw45cm"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_xdobb"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_7k4cm"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="3_j60jw"]
+
+[sub_resource type="Resource" id="Resource_f1xts"]
+script = ExtResource("1_xdobb")
+character_name = "Shrek"
+text = "Então, sabe como é, tá na hora do almoço e eu to com mó larica."
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[sub_resource type="Resource" id="Resource_q8kuu"]
+script = ExtResource("2_7k4cm")
+text = "Claro que sim, Shrek."
+ID = 2
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_k711e"]
+script = ExtResource("2_7k4cm")
+text = "Não, Shrek, eu te odeio, aaaaaaaaaaaaaaaaaaaaa."
+ID = 3
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_dvwyr"]
+script = ExtResource("1_xdobb")
+character_name = "Shrek"
+text = "Tu não consegue arranjar umas cebolas pra mim não?"
+choices = Array[ExtResource("2_7k4cm")]([SubResource("Resource_q8kuu"), SubResource("Resource_k711e")])
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("3_j60jw")
+dialogs = Array[ExtResource("1_xdobb")]([SubResource("Resource_f1xts"), SubResource("Resource_dvwyr")])
+metadata/_custom_type_script = "uid://doptbal56qkjw"

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=7 format=3 uid="uid://8g38mjjtm7hv"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_i75fo"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_bx03o"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="3_tm26q"]
+
+[sub_resource type="Resource" id="Resource_d7td6"]
+script = ExtResource("2_bx03o")
+text = "Tudo sim!"
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_3hxdh"]
+script = ExtResource("2_bx03o")
+text = "Na verdade não, Shrek. Não ando muito bem ultimamente e..."
+ID = 1
+metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
+
+[sub_resource type="Resource" id="Resource_kc2d5"]
+script = ExtResource("1_i75fo")
+character_name = "Shrek"
+text = "Eae, meu fio, tudo bem?"
+choices = Array[ExtResource("2_bx03o")]([SubResource("Resource_d7td6"), SubResource("Resource_3hxdh")])
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("3_tm26q")
+dialogs = Array[ExtResource("1_i75fo")]([SubResource("Resource_kc2d5")])
+metadata/_custom_type_script = "uid://doptbal56qkjw"

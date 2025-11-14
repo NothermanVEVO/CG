@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbhldptq1ilcd"]
+[gd_scene load_steps=9 format=3 uid="uid://dbhldptq1ilcd"]
 
 [ext_resource type="Script" uid="uid://b8uuwunqw1jhd" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://to8d7ncwjb4c" path="res://camera/3th/perspective_camera_3.tscn" id="1_oul6g"]
 [ext_resource type="PackedScene" uid="uid://buaefwlc6a2no" path="res://assets/characters/sakamoto/sakamoto4.glb" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://b7ctujfn1t660" path="res://dialog/code/dialog_box.tscn" id="4_yw30f"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_n04j3"]
 
@@ -52,3 +53,7 @@ collision_mask = 2
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4471424, 0)
 mesh = SubResource("TorusMesh_oul6g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_yw30f")]

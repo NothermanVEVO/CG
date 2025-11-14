@@ -10,4 +10,4 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	time += delta * 2
 	rotate(Vector3(0, 1, 0), delta)
-	global_position.y = initial_position.y + sin(time)
+	global_position.y = initial_position.y + (sin(time) / 4)

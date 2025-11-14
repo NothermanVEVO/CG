@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b3h5cdd2oemub"]
+[gd_scene load_steps=17 format=3 uid="uid://b3h5cdd2oemub"]
 
 [ext_resource type="PackedScene" uid="uid://dhgj5kc71ueex" path="res://assets/doors/scenes/strange_door.tscn" id="1_lqd3y"]
 [ext_resource type="PackedScene" uid="uid://dbhldptq1ilcd" path="res://player/player.tscn" id="1_n04j3"]
@@ -7,8 +7,11 @@
 [ext_resource type="Script" uid="uid://b2got4vpnvr1c" path="res://test.gd" id="6_fg5ic"]
 [ext_resource type="PackedScene" uid="uid://jpae1g0lcdpy" path="res://assets/characters/shrek/shrek.tscn" id="7_fg5ic"]
 [ext_resource type="PackedScene" uid="uid://cw3drew2mpht2" path="res://assets/trees/tree1/tree1.glb" id="8_virqd"]
-[ext_resource type="Script" uid="uid://xrjy6sqlgs4" path="res://interaction/interaction.gd" id="9_05hq7"]
+[ext_resource type="Script" uid="uid://cixjk53auyltv" path="res://interaction/dialog_interaction.gd" id="9_05hq7"]
 [ext_resource type="PackedScene" uid="uid://bars4a8htvf6e" path="res://assets/maps/Swap/Scene/swap.tscn" id="9_mmoqy"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="10_317m3"]
+[ext_resource type="Resource" uid="uid://8g38mjjtm7hv" path="res://dialog/resources/collect onion mission 1/1_mission.tres" id="11_4rhux"]
+[ext_resource type="Resource" uid="uid://c1ioxjqhw45cm" path="res://dialog/resources/collect onion mission 1/2_mission.tres" id="12_4rhux"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1pvu3"]
 sky_top_color = Color(0.5963905, 0.8121756, 0.9812675, 1)
@@ -20,6 +23,9 @@ sky_material = SubResource("ProceduralSkyMaterial_1pvu3")
 [sub_resource type="Environment" id="Environment_n04j3"]
 background_mode = 2
 sky = SubResource("Sky_lqd3y")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mmoqy"]
+radius = 4.972939
 
 [node name="Level1House" type="Node3D"]
 
@@ -40,7 +46,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.592793, 22.405933, -0.26956463)
 
 [node name="Interest" parent="." instance=ExtResource("5_qcxbp")]
-transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -1.638058, 3.9217691, -7.3779225)
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -18.99526, 5.10775, -5.4116592)
 script = ExtResource("6_fg5ic")
 
 [node name="Shrek" parent="." instance=ExtResource("7_fg5ic")]
@@ -53,4 +59,10 @@ transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 3.8442678, 10.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -167.8245, -15.026855, 469.47992)
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.349615, 1.5515342, -6.080945)
 script = ExtResource("9_05hq7")
+dialogs = Array[ExtResource("10_317m3")]([ExtResource("11_4rhux"), ExtResource("12_4rhux")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78837967, 0, 0)
+shape = SubResource("SphereShape3D_mmoqy")
