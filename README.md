@@ -15,7 +15,7 @@ Os modelos do Jogador, da Porta, da Cebola e da Árvore foram feitos à mão par
 - Você pode avançar o diálogo pressionando "Botão Esquerdo do Mouse; Barra de Espaço; Enter; E".
 
 ## Jogabilidade
-[(Vídeo)](https://drive.google.com/file/d/1VIPergtjDTlYeGSkahFDiV-CGW8ekF1d/view?usp=sharing)
+[(LINK PARA VIDEO DA JOGABILIDADE)](https://drive.google.com/file/d/1VIPergtjDTlYeGSkahFDiV-CGW8ekF1d/view?usp=sharing)
 
 ![Imagem da Jogabilidade 1](readme_imgs/gameplay1.png)
 ![Imagem da Jogabilidade 2](readme_imgs/gameplay2.png)
@@ -34,7 +34,7 @@ The model of the Player, the Door, the Onion and the Tree were handmade for this
 - You can advance the dialog by pressing "Left Mouse Button; Spacebar; Enter; E".
 
 ## Gameplay
-[(Video)](https://drive.google.com/file/d/1VIPergtjDTlYeGSkahFDiV-CGW8ekF1d/view?usp=sharing)
+[(LINK OF THE GAMEPLAY)](https://drive.google.com/file/d/1VIPergtjDTlYeGSkahFDiV-CGW8ekF1d/view?usp=sharing)
 
 ![Image Gameplay 1](readme_imgs/gameplay1.png)
 ![Image Gameplay 2](readme_imgs/gameplay2.png)
