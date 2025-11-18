@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbhldptq1ilcd"]
+[gd_scene load_steps=12 format=3 uid="uid://dbhldptq1ilcd"]
 
 [ext_resource type="Script" uid="uid://b8uuwunqw1jhd" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://to8d7ncwjb4c" path="res://camera/3th/perspective_camera_3.tscn" id="1_oul6g"]
 [ext_resource type="PackedScene" uid="uid://buaefwlc6a2no" path="res://assets/characters/sakamoto/sakamoto4.glb" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://pk4rqqshp46f" path="res://assets/characters/sakamoto/sakamoto_4.tscn" id="3_boad6"]
+[ext_resource type="PackedScene" uid="uid://ddyu05u7vsfr6" path="res://player/UI.tscn" id="4_g6k8r"]
+[ext_resource type="PackedScene" uid="uid://caafmgwrdukt" path="res://interaction/interact_text.tscn" id="4_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://b7ctujfn1t660" path="res://dialog/code/dialog_box.tscn" id="4_yw30f"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_n04j3"]
@@ -23,6 +26,10 @@ script = ExtResource("1_g1dw6")
 [node name="Corpo" type="Node3D" parent="."]
 
 [node name="sakamoto4" parent="Corpo" instance=ExtResource("2_rkbax")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 0, 0)
+visible = false
+
+[node name="sakamoto5" parent="Corpo" instance=ExtResource("3_boad6")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 0, 0)
 
 [node name="Corpo2" type="Node3D" parent="."]
@@ -55,5 +62,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4471424, 0)
 mesh = SubResource("TorusMesh_oul6g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("4_g6k8r")]
+offset_bottom = 60.0
+
+[node name="InteractText" parent="CanvasLayer" instance=ExtResource("4_qjkh3")]
+visible = false
 
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_yw30f")]

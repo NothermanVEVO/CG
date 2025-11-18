@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=5 format=3 uid="uid://n02w7kgxyktm"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_40041"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_a3pte"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="2_gvuix"]
+
+[sub_resource type="Resource" id="Resource_na6rm"]
+script = ExtResource("1_40041")
+ID = 1
+character_name = "Shrek"
+text = "Shrek, ah é? Então se liga nisso aqui!"
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("2_gvuix")
+dialogs = Array[ExtResource("1_40041")]([SubResource("Resource_na6rm")])
+metadata/_custom_type_script = "uid://doptbal56qkjw"

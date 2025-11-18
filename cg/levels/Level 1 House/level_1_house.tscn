@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b3h5cdd2oemub"]
+[gd_scene load_steps=20 format=3 uid="uid://b3h5cdd2oemub"]
 
 [ext_resource type="PackedScene" uid="uid://dhgj5kc71ueex" path="res://assets/doors/scenes/strange_door.tscn" id="1_lqd3y"]
 [ext_resource type="PackedScene" uid="uid://dbhldptq1ilcd" path="res://player/player.tscn" id="1_n04j3"]
@@ -12,6 +12,9 @@
 [ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="10_317m3"]
 [ext_resource type="Resource" uid="uid://8g38mjjtm7hv" path="res://dialog/resources/collect onion mission 1/1_mission.tres" id="11_4rhux"]
 [ext_resource type="Resource" uid="uid://c1ioxjqhw45cm" path="res://dialog/resources/collect onion mission 1/2_mission.tres" id="12_4rhux"]
+[ext_resource type="Resource" uid="uid://bqqaunjosvgma" path="res://dialog/resources/collect onion mission 1/3_mission.tres" id="13_xebpg"]
+[ext_resource type="Resource" uid="uid://prxeginb5mar" path="res://dialog/resources/collect onion mission 1/5_mission.tres" id="14_ejdsh"]
+[ext_resource type="PackedScene" uid="uid://dou13ne3anxmm" path="res://assets/onion/onion.tscn" id="14_s0gju"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1pvu3"]
 sky_top_color = Color(0.5963905, 0.8121756, 0.9812675, 1)
@@ -49,20 +52,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.592793, 22.405933, -0.269
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -18.99526, 5.10775, -5.4116592)
 script = ExtResource("6_fg5ic")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Interest"]
+light_color = Color(1, 1, 0, 1)
+light_energy = 10.567
+light_specular = 0.995
+omni_range = 13.991
+
 [node name="Shrek" parent="." instance=ExtResource("7_fg5ic")]
 transform = Transform3D(0.018087666, 0, 0.0519407, 0, 0.055, 0, -0.0519407, 0, 0.018087666, -19.142277, -0.12097025, -5.4127083)
 
 [node name="tree1" parent="." instance=ExtResource("8_virqd")]
-transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0, 3.8442678, 10.917859)
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 17.871231, 3.8442678, 10.917859)
 
 [node name="Swap" parent="." instance=ExtResource("9_mmoqy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -167.8245, -15.026855, 469.47992)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Dialog" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.349615, 1.5515342, -6.080945)
 script = ExtResource("9_05hq7")
-dialogs = Array[ExtResource("10_317m3")]([ExtResource("11_4rhux"), ExtResource("12_4rhux")])
+dialogs = Array[ExtResource("10_317m3")]([ExtResource("11_4rhux"), ExtResource("12_4rhux"), ExtResource("13_xebpg"), ExtResource("14_ejdsh")])
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialog"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78837967, 0, 0)
 shape = SubResource("SphereShape3D_mmoqy")
+
+[node name="Collectable" parent="." instance=ExtResource("14_s0gju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.307459, 0.6169255, 24.597382)
+
+[node name="Collectable2" parent="." instance=ExtResource("14_s0gju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.932648, 0.7238288, -31.610325)
+
+[node name="Collectable3" parent="." instance=ExtResource("14_s0gju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.097848, 0.33235806, -21.817915)
+
+[node name="Collectable4" parent="." instance=ExtResource("14_s0gju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.366825, 0.17264283, 33.90061)
+
+[node name="Collectable5" parent="." instance=ExtResource("14_s0gju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.863665, 0.29506302, 3.3001776)

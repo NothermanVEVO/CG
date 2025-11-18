@@ -7,7 +7,7 @@
 [sub_resource type="Resource" id="Resource_e24mk"]
 script = ExtResource("1_8vfbj")
 character_name = "Shrek"
-text = "Aah, que bom."
+text = "Hmm... [color=#FF2800][shake rate=20.0 level=7 connected=1]Não ligo.[/shake][/color]"
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 
 [resource]

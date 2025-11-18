@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=5 format=3 uid="uid://bqqaunjosvgma"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_tcglc"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_gwofa"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="2_wqbvb"]
+
+[sub_resource type="Resource" id="Resource_60fsk"]
+script = ExtResource("1_tcglc")
+ID = 2
+character_name = "Shrek"
+text = "Eae, arranjou as 5 cebolas?"
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("2_wqbvb")
+dialogs = Array[ExtResource("1_tcglc")]([SubResource("Resource_60fsk")])
+wait_for_condition = true
+metadata/_custom_type_script = "uid://doptbal56qkjw"

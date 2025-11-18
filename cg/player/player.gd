@@ -4,13 +4,15 @@ class_name Player
 
 ## ANGELINO
 
-const SPEED : float = 2000.0
-const JUMP_SPEED : float = 300.0
+const SPEED : float = 1250.0
+const JUMP_SPEED : float = 400.0
 const DECELERATION : float = 0.8
 
 var direction : Vector2
 
 @onready var _corpo : Node3D = $Corpo
+
+static var onions : int = 0
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

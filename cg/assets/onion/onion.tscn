@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dou13ne3anxmm"]
+
+[ext_resource type="Script" uid="uid://bekjpj3i05t8e" path="res://interaction/collectable.gd" id="1_ugi14"]
+[ext_resource type="PackedScene" uid="uid://c3ss2fnt1qn8u" path="res://assets/onion/onion.glb" id="2_wgwrd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2m7po"]
+radius = 0.9262271
+
+[node name="Collectable" type="Area3D"]
+script = ExtResource("1_ugi14")
+metadata/_custom_type_script = "uid://bekjpj3i05t8e"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.8627451, 0.4509804, 1)
+light_energy = 3.474
+shadow_bias = 10.0
+shadow_normal_bias = 10.0
+distance_fade_enabled = true
+omni_range = 23.405
+
+[node name="onion" parent="." instance=ExtResource("2_wgwrd")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_2m7po")

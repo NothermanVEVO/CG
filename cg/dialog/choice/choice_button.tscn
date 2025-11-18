@@ -8,6 +8,10 @@ offset_right = 100.0
 offset_bottom = 23.0
 script = ExtResource("1_5shiw")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
 

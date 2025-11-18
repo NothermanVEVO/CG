@@ -18,7 +18,7 @@ metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
 [sub_resource type="Resource" id="Resource_kc2d5"]
 script = ExtResource("1_i75fo")
 character_name = "Shrek"
-text = "Eae, meu fio, tudo bem?"
+text = "Eae, meu fio, [wave amp=50.0 freq=5.0 connected=1]tudo bem?[/wave]"
 choices = Array[ExtResource("2_bx03o")]([SubResource("Resource_d7td6"), SubResource("Resource_3hxdh")])
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 

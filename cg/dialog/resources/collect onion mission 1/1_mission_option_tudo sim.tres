@@ -7,7 +7,7 @@
 [sub_resource type="Resource" id="Resource_e24mk"]
 script = ExtResource("1_ojbs3")
 character_name = "Shrek"
-text = "Não ligo!"
+text = "Ah, que bom!"
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 
 [resource]

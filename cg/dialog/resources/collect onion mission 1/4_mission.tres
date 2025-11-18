@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=5 format=3 uid="uid://byqxhyb5wmwg4"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_yciui"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_gd6oe"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="2_jd6uf"]
+
+[sub_resource type="Resource" id="Resource_liotf"]
+script = ExtResource("1_yciui")
+character_name = "Shrek"
+text = "Boa demais, valeu aí, salvou meu almoço!"
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("2_jd6uf")
+dialogs = Array[ExtResource("1_yciui")]([SubResource("Resource_liotf")])
+metadata/_custom_type_script = "uid://doptbal56qkjw"

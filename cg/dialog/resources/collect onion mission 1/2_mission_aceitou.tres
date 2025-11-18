@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=6 format=3 uid="uid://bp0mq2wpm1oef"]
+
+[ext_resource type="Script" uid="uid://nrftvm2pjgfp" path="res://dialog/code/dialog.gd" id="1_drv3j"]
+[ext_resource type="Script" uid="uid://doptbal56qkjw" path="res://dialog/code/dialogs.gd" id="2_levxk"]
+[ext_resource type="Script" uid="uid://bc2fs5n3dig8x" path="res://dialog/choice/choice.gd" id="2_no7ix"]
+
+[sub_resource type="Resource" id="Resource_ro3vl"]
+script = ExtResource("1_drv3j")
+character_name = "Shrek"
+text = "Aí sim, arranja umas 5 cebolas pra mim então, tão ao redor da minha casa aqui."
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[sub_resource type="Resource" id="Resource_7711o"]
+script = ExtResource("1_drv3j")
+character_name = "Shrek"
+text = "E vai logo que eu to com fome."
+metadata/_custom_type_script = "uid://nrftvm2pjgfp"
+
+[resource]
+script = ExtResource("2_levxk")
+dialogs = Array[ExtResource("1_drv3j")]([SubResource("Resource_ro3vl"), SubResource("Resource_7711o")])
+metadata/_custom_type_script = "uid://doptbal56qkjw"

@@ -24,8 +24,9 @@ metadata/_custom_type_script = "uid://bc2fs5n3dig8x"
 
 [sub_resource type="Resource" id="Resource_dvwyr"]
 script = ExtResource("1_xdobb")
+ID = 3
 character_name = "Shrek"
-text = "Tu não consegue arranjar umas cebolas pra mim não?"
+text = "Tu não consegue arranjar umas [rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0][tornado radius=5.0 freq=1.0 connected=1]cebolas[/tornado][/rainbow] pra mim não?"
 choices = Array[ExtResource("2_7k4cm")]([SubResource("Resource_q8kuu"), SubResource("Resource_k711e")])
 metadata/_custom_type_script = "uid://nrftvm2pjgfp"
 

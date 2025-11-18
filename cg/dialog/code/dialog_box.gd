@@ -38,7 +38,7 @@ func start(dialogs : Dialogs) -> void:
 	_started = true
 	
 	for dialog in dialogs.dialogs:
-		DialogHandler.handle_dialog_id(dialog.ID)
+		#DialogHandler.handle_dialog_id(dialog.ID)
 		_name_text.text = dialog.character_name
 		_dialog_text.text = dialog.text
 		
@@ -52,6 +52,7 @@ func start(dialogs : Dialogs) -> void:
 				_choices_v_box.add_child(choice_button)
 			await DialogHandler.choice_selected
 			_clear_choices_box()
+		DialogHandler.handle_dialog_id(dialog.ID)
 	_started = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	dialog_ended.emit()
@@ -61,6 +62,8 @@ func _run_dialog(text : String, has_options : bool) -> void:
 	for i in text.length():
 		_dialog_text.visible_characters = i + 1
 		match text[i]:
+			" ":
+				pass
 			'.', '!', '?':
 				_timer.start(_PONTUATION_CHARACTERS / speed)
 				await _timer.timeout
