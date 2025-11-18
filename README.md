@@ -3,7 +3,7 @@
 # Português
 
 ## Sobre
-O jogo foi feito usando o Godot 4.5. Você pode dialogar com o Shrek, tendo várias opções para escolher, algumas das quais impactam o jogo.
+O jogo foi feito usando o Godot 4.5. Você pode dialogar com o Shrek, tendo várias opções para escolher, algumas das quais impactam o jogo.  
 O jogo possui um shader de contorno, presente no Jogador e no Shrek.  
 Os modelos do Jogador, da Porta, da Cebola e da Árvore foram feitos à mão para este projeto; os demais modelos foram encontrados na internet.
 
